@@ -18,11 +18,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        var digit: Int = 127
         DispatchQueue.main.asyncAfter (deadline: .now() + .seconds(2)){
-            self.segment1.displayNumber(6)
-            self.segment2.displayNumber(7)
-            self.segment3.displayNumber(9)
+            self.segment1.displayNumber((digit/100)%10)
+            self.segment2.displayNumber((digit/10)%10)
+            self.segment3.displayNumber(digit%10)
         }
     }
 }
