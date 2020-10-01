@@ -2,4 +2,8 @@
 
 7 SEGMENT DISPLAY
 
-![Screenshoot](./images/screen1.png)
+# Tasks
+1) -[ ] add loading screnn
+2) -[ ] add segment cotrol
+## Screenshot
+![Screenshot](./images/screen1.png)
