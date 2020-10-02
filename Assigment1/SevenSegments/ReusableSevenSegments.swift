@@ -47,6 +47,9 @@ class ReusableSevenSegments: UIView {
     }
     
     public func displayNumber(_ number: Int) {
+        for seg in segments{
+            seg.backgroundColor = .systemGray2
+        }
         for index in dict[number]!{
             segments[index].backgroundColor = .red
         }
