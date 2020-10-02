@@ -1,19 +1,22 @@
 name: Swift
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+on: pull_request
+name: CI
 jobs:
-  build:
-
-    runs-on: macos-latest
-
+  test:
+    name: Test
+    runs-on: macOS-latest
+    strategy:
+      matrix:
+        destination: ['platform=iOS Simulator,OS=14,name=iPhone X']
     steps:
-    - uses: actions/checkout@v2
-    - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Testing
+        run: |
+          cd Assigment1
+          xcodebuild clean test -project Assigment1.xcodeproj -scheme Assigment1 -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+          bash <(curl -s https://codecov.io/bash) -t "${CODECOV_TOKEN}"
+        env: 
+           destination: ${{ matrix.destination }}
+           CODECOV_TOKEN: ${{ secrets.codecov_token }}
