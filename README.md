@@ -4,7 +4,7 @@
 
 ## Tasks
 
-1) -[ ] add loading screnn
+1) -[x] add loading screnn
 2) -[x] add segment cotrol
 
 ## Screenshot
