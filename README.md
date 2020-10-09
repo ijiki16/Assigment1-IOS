@@ -6,6 +6,7 @@
 
 1) -[x] add loading screnn
 2) -[x] add segment cotrol
+3) -[x] change 7 segment shape
 
 ## Screenshot
 
