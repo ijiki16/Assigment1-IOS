@@ -1,7 +1,6 @@
 name: Swift
 
 on: pull_request
-name: CI
 jobs:
   test:
     name: Test
