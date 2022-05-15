@@ -4,8 +4,8 @@
 
 ## Tasks
 
-1) -[x] add loading screnn
-2) -[x] add segment cotrol
+1) -[x] add loading screen
+2) -[x] add segment control
 3) -[x] change 7 segment shape
 
 ## Screenshot
